@@ -1,19 +1,18 @@
-package goscrapper
+package main
 
 import (
-	"main/handlers"
-	"net/http"
-
-	"github.com/gorilla/mux"
+	handlers "main/handlers"
 )
 
 
 func main(){
 
-	r := mux.NewRouter()
+	// r := mux.NewRouter()
 
 
-	r.HandleFunc('/',func(w http.ResponseWriter, r *http.Request) {
-		handlers.ScrapHandler(w,r)
-	})
+	// r.HandleFunc("/",func(w http.ResponseWriter, r *http.Request) {
+	// 	handlers.ScrapHandler(w,r)
+	// })
+	
+	handlers.ScrapHandler()
 }
